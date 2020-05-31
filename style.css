@@ -1,24 +1,32 @@
 body {
 }
-#main-note {
-    display:none;
-    font-family: "Lucida Grande",Verdana;
-    margin-top:10px;
-    margin-left:3px;
-    font-size: 18pt;
-    white-space: pre-line;
-    
+#main-date {
+    margin-top: 20pt;
+    margin-bottom:10pt;
     width:400pt;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40pt;
+    text-align:center;
+    font-family: "Lucida Grande",Verdana;
+    font-size: 12pt;
+    color:#666;
+    visibility: hidden;
+}
+#main-note {
+    display:none;
+    font-family: "Lucida Grande",Verdana;
+    font-size: 18pt;
+    white-space: pre-line;
+    word-break: break-all;
+    width:400pt;
+    margin-left: auto;
+    margin-right: auto;
 }
 #main-edit {
     width:400pt;
     display:block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40pt;
     font-size: 18pt;
     font-family: "Lucida Grande",Verdana;
 

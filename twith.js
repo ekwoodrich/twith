@@ -11,6 +11,8 @@ function checkKey(e) {
             console.log('switching to new mode');
             document.getElementById('main-note').style.display = 'none';
             document.getElementById('main-edit').style.display = 'block';
+            document.getElementById('main-date').style.visibility = 'hidden';
+
             document.getElementById('main-edit').focus();
 
             editing = true;
@@ -24,6 +26,8 @@ function checkKey(e) {
             console.log('switching to edit mode');
             document.getElementById('main-note').style.display = 'none';
             document.getElementById('main-edit').style.display = 'block';
+            document.getElementById('main-date').style.visibility = 'hidden';
+            
             document.getElementById('main-edit').value = document.getElementById('main-note').innerHTML;
 
 
@@ -50,6 +54,7 @@ function checkKey(e) {
             
             document.getElementById('main-note').style.display = 'block';
             document.getElementById('main-edit').style.display = 'none';
+            document.getElementById('main-date').style.visibility = 'visible';
             editing = false;
         }
     }
