@@ -1,10 +1,33 @@
 body {
 }
-#main {
-    width:100%;
+#main-note {
+    display:none;
+    font-family: "Lucida Grande",Verdana;
+    margin-top:10px;
+    margin-left:3px;
     font-size: 18pt;
+    white-space: pre-line;
+    
+    width:400pt;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40pt;
 }
-#main:focus { 
+#main-edit {
+    width:400pt;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40pt;
+    font-size: 18pt;
+    font-family: "Lucida Grande",Verdana;
+
+    outline: none !important;
+    border:none;
+    box-shadow: none;
+
+}
+#main-edit:focus { 
     outline: none !important;
     border:none;
     box-shadow: none;
