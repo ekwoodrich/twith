@@ -1,0 +1,11 @@
+body {
+}
+#main {
+    width:100%;
+    font-size: 18pt;
+}
+#main:focus { 
+    outline: none !important;
+    border:none;
+    box-shadow: none;
+}
