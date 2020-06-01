@@ -1,6 +1,7 @@
 let noteList = [];
 let editing = true;
 let creating = true;
+let currentNote = null;
 
 function uuidv4() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -47,11 +48,17 @@ function checkKey(e) {
      
     if (evtobj.key == 'Escape')  {
             
-            var dateobj = new Date(); 
+            var dateObj = new Date(); 
             if (creating){
-                noteList.push({'uuid': uuidv4(), created_on: dateobj.toISOString(), edited_on: dateobj.toISOString(),'body' : document.getElementById('main-edit').value});
+                let noteUUID = uuidv4()
+                let newNote = {'uuid': noteUUID, created_on: dateObj.toISOString(), edited_on: dateObj.toISOString(),'body' : document.getElementById('main-edit').value};
+                currentNote = newNote;
+                noteList.push(newNote);
                 creating=false;
+                console.log('saving new note ' + noteUUID);
             }
+
+            
             console.log(noteList);
 
             console.log('switching to view mode');
@@ -59,7 +66,12 @@ function checkKey(e) {
             let editText = document.getElementById('main-edit').value;
             document.getElementById('main-note').innerHTML = editText;
 
+
             document.getElementById('main-edit').value = '';
+
+            let currentCreated = new Date(currentNote.created_on).toLocaleString();
+            document.getElementById('main-date').innerHTML = currentCreated;
+
             
             document.getElementById('main-note').style.display = 'block';
             document.getElementById('main-edit').style.display = 'none';
